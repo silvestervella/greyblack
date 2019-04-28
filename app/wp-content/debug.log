@@ -1,0 +1,21 @@
+[10-Mar-2019 18:03:34 UTC] PHP Notice:  Undefined index: term in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 103
+[10-Mar-2019 18:03:34 UTC] PHP Notice:  Undefined index: term in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 108
+[10-Mar-2019 18:03:34 UTC] PHP Notice:  Trying to get property 'name' of non-object in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 109
+[10-Mar-2019 18:03:34 UTC] PHP Notice:  Undefined variable: product_section in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 115
+[10-Mar-2019 18:03:35 UTC] PHP Notice:  Undefined index: term in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 103
+[10-Mar-2019 18:03:35 UTC] PHP Notice:  Undefined index: term in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 108
+[10-Mar-2019 18:03:35 UTC] PHP Notice:  Trying to get property 'name' of non-object in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 109
+[10-Mar-2019 18:03:35 UTC] PHP Notice:  Undefined variable: product_section in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 115
+[10-Mar-2019 18:04:38 UTC] PHP Notice:  Undefined index: term in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 108
+[10-Mar-2019 18:04:38 UTC] PHP Notice:  Trying to get property 'name' of non-object in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 109
+[10-Mar-2019 18:04:38 UTC] PHP Notice:  Undefined variable: product_section in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 115
+[10-Mar-2019 18:04:39 UTC] PHP Notice:  Undefined index: term in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 108
+[10-Mar-2019 18:04:39 UTC] PHP Notice:  Trying to get property 'name' of non-object in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 109
+[10-Mar-2019 18:04:39 UTC] PHP Notice:  Undefined variable: product_section in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 115
+[17-Mar-2019 16:02:14 UTC] PHP Fatal error:  Cannot redeclare greyblack_generate_product_posts_home() (previously declared in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php:133) in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 209
+[17-Mar-2019 16:03:11 UTC] PHP Notice:  Trying to get property 'name' of non-object in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 152
+[17-Mar-2019 16:03:11 UTC] PHP Notice:  Undefined variable: product_section in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 196
+[17-Mar-2019 16:03:11 UTC] PHP Notice:  Undefined variable: product_section in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 162
+[17-Mar-2019 16:04:24 UTC] PHP Notice:  Trying to get property 'name' of non-object in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 152
+[17-Mar-2019 16:04:58 UTC] PHP Notice:  Trying to get property 'name' of non-object in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 152
+[17-Mar-2019 19:32:18 UTC] PHP Notice:  Trying to get property 'name' of non-object in /Applications/MAMP/htdocs/greyblack/app/wp-content/plugins/gb-products/index.php on line 152

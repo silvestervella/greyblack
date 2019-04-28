@@ -1,0 +1,108 @@
+@function luma($c) {
+    $-local-red: red(rgba($c, 1.0));
+    $-local-green: green(rgba($c, 1.0));
+    $-local-blue: blue(rgba($c, 1.0));
+    @return (0.2126 * $-local-red +
+    0.7152 * $-local-green +
+    0.0722 * $-local-blue) / 255;
+}
+
+
+@function decimal($v) {
+    @if (type_of($v) != number OR unit($v) != "%") {
+        @error "decimal: `#{$v}` is not a percent";
+    }
+    @return $v / 100%;
+}
+
+
+/* choose between accent or white/black */
+@function gen-color($bg, $c1) {
+    @if index($c1 , null) {
+        $c1: white;
+    }
+    $bg-luma: luma($bg);
+    $c1-luma: luma($c1);
+    $pri-luma: luma($primary);
+
+    $white-luma: luma(#ffffff);
+    $black-luma: luma(#000000);
+
+    $c1-diff: abs($bg-luma - $c1-luma);
+    $pri-diff: abs($bg-luma - $pri-luma);
+    $white-diff: abs($bg-luma - $white-luma);
+    $black-diff: abs($bg-luma - $black-luma);
+
+    $back-perc:  abs(($bg-luma * 80) / 100);
+    $lightBench: 0;
+
+    @if ($benchMark == 0) {
+        $lightBench: 0.218;
+    } @else {
+        $lightBench: 0.358; 
+    }
+    
+
+    $back-light: lightness($bg);
+    $c1-light: lightness($c1);
+    $pri-light: lightness($primary);
+
+    $light-diff: decimal(abs($back-light - $c1-light));
+    $pri-light-diff: decimal(abs($back-light - $pri-light));
+
+    @if (($c1-diff > $back-perc and $light-diff > $lightBench) and ($c1 != white) and ($c1 != black)) {
+        @return $c1;
+    }
+
+     @else {
+         @if (($enforceAccent == 1 and $c1-diff > 0.3) and ($c1 == $accent) ) {
+            @return $accent;
+         } @else {
+
+                 @if ($white-diff > $black-diff) {
+                    @return white;
+                 }
+                 @else {
+                     @return black;
+                 }
+
+         }
+    }
+}
+
+
+// lighten v darken
+@function lod($bg) {
+    @if (lightness($bg) < 40) {
+    @return lighten($bg , 15%);
+    } @else {
+    @return darken($bg , 15%);
+    }
+}
+
+
+@function adj-color-tx($bg , $color) {
+    $bg-sat: saturation($bg);
+    $bg-light: lightness($bg);
+
+    $light-diff: abs($bg-light - 100%);
+    $sat-diff: abs($bg-sat - 100%);
+
+    $ze: change-color($color, $lightness: $light-diff ,  $saturation: $sat-diff );
+    $select-color: gen-color($bg , $ze);
+
+    @if (($select-color == white) or ($select-color == black))  {
+        @return $select-color;
+    } @else {
+        @return $ze;
+    }
+}
+
+@function adj-color-bg($copy-color , $color) {
+    $copy-color-sat: saturation($copy-color);
+    $copy-color-light: lightness($copy-color);
+
+    $ze: change-color($color, $lightness: $copy-color-light ,  $saturation: $copy-color-sat );
+
+    @return $ze;
+}

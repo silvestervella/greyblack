@@ -1,0 +1,144 @@
+/* 1. Variables */
+$primary-color: rgb(24,117,209);
+$primary-color-two: rgb(33, 150, 243);
+$secondary-color: rgb(186, 38, 193);
+$grey: rgb(51, 51, 51);
+$text-one: rgb(255,255,255);
+$login-box-color: rgb(255,255,255);
+
+$table-back-color: rgb(255,255,255);
+$table-back-color-alpha: 0.25;
+
+$bg-logo: url('../../../uploads/2018/10/emblemtransp.png');
+
+
+
+/* General */
+body {
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+body.login.login-action-login {
+    background: $primary-color; /* Old browsers */
+    background: -moz-linear-gradient(45deg, rgba($primary-color,1) 0%, rgba($primary-color,1) 55%, rgba($secondary-color,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba($primary-color,1) 0%,rgba($primary-color,1) 55%,rgba($secondary-color,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgba($primary-color,1) 0%,rgba($primary-color,1) 55%,rgba($secondary-color,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$primary-color, endColorstr=$secondary-color,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    h1 a {
+        background-image: $bg-logo;
+        background-size: 100%;
+        width: 120px;
+    }
+    form {
+        background: rgba($table-back-color , $table-back-color-alpha);
+        color: $login-box-color;
+        label {
+            color: $login-box-color;
+        }
+    }
+    #login_error, .message, .success {
+        background: rgba($table-back-color , $table-back-color-alpha);
+        color: $login-box-color;
+        border-left: 1px solid $login-box-color;
+    }
+     #backtoblog a, #nav a {
+        color: $login-box-color;
+    }
+    .button-primary {
+        background: $login-box-color;
+        border: 0;
+        box-shadow: none;
+        color: $grey;
+        text-shadow: none;
+    }
+}
+#wpwrap {
+    background-image: $bg-logo;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+
+
+
+/* Nav */
+#wpwrap {
+    #wpadminbar {
+        background: $primary-color; /* Old browsers */
+background: -moz-linear-gradient(45deg, rgba($primary-color,1) 0%, rgba($primary-color,1) 55%, rgba($secondary-color,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, rgba($primary-color,1) 0%,rgba($primary-color,1) 55%,rgba($secondary-color,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, rgba($primary-color,1) 0%,rgba($primary-color,1) 55%,rgba($secondary-color,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$primary-color, endColorstr=$secondary-color,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+}
+#adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
+    background: $primary-color;
+}
+#adminmenu .wp-has-current-submenu .wp-submenu, #adminmenu .wp-has-current-submenu .wp-submenu.sub-open, #adminmenu .wp-has-current-submenu.opensub .wp-submenu, #adminmenu a.wp-has-current-submenu:focus+.wp-submenu, .no-js li.wp-has-current-submenu:hover .wp-submenu {
+    background: $primary-color-two;
+}
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu .wp-menu-arrow, #adminmenu .wp-menu-arrow div, #adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, .folded #adminmenu li.current.menu-top, .folded #adminmenu li.wp-has-current-submenu {
+    background: darken($primary-color ,  25%)
+}
+#adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus {
+    background: darken($primary-color ,  25%);
+    color: $text-one;
+}
+#wpadminbar .ab-top-menu>li.hover>.ab-item, #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus, #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item, #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
+    background: darken($primary-color ,  25%);
+    color: $text-one;
+}
+#adminmenu .wp-submenu a:focus, #adminmenu .wp-submenu a:hover, #adminmenu a:hover, #adminmenu li.menu-top>a:focus {
+    color: $text-one;
+}
+#wpadminbar:not(.mobile)>#wp-toolbar a:focus span.ab-label, #wpadminbar:not(.mobile)>#wp-toolbar li:hover span.ab-label, #wpadminbar>#wp-toolbar li.hover span.ab-label {
+    color: $text-one;
+}
+#wpadminbar .menupop .ab-sub-wrapper, #wpadminbar .shortlink-input {
+    background: $primary-color-two;
+}
+#wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover>a, #wpadminbar .quicklinks .menupop ul li a:focus, #wpadminbar .quicklinks .menupop ul li a:focus strong, #wpadminbar .quicklinks .menupop ul li a:hover, #wpadminbar .quicklinks .menupop ul li a:hover strong, #wpadminbar .quicklinks .menupop.hover ul li a:focus, #wpadminbar .quicklinks .menupop.hover ul li a:hover, #wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:focus, #wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:hover, #wpadminbar li #adminbarsearch.adminbar-focused:before, #wpadminbar li .ab-item:focus .ab-icon:before, #wpadminbar li .ab-item:focus:before, #wpadminbar li a:focus .ab-icon:before, #wpadminbar li.hover .ab-icon:before, #wpadminbar li.hover .ab-item:before, #wpadminbar li:hover #adminbarsearch:before, #wpadminbar li:hover .ab-icon:before, #wpadminbar li:hover .ab-item:before, #wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus, #wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover {
+    color: $text-one;
+}
+#wpadminbar .quicklinks .menupop ul.ab-sub-secondary, #wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu {
+    background: $primary-color-two;
+}
+#adminmenu li a:focus div.wp-menu-image:before, #adminmenu li.opensub div.wp-menu-image:before, #adminmenu li:hover div.wp-menu-image:before {
+    color: $text-one;
+}
+#wpadminbar a.ab-item, {
+    color: $text-one;
+}
+ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu>li.current>a.current:after , ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu>li.current>a.current:after , #adminmenu li.wp-has-submenu.wp-not-current-submenu:hover:after {
+    border-right-color: $text-one;
+}
+#collapse-button , #collapse-button:focus, #collapse-button:hover {
+    color: $text-one;
+}
+#wpadminbar:not(.mobile) .ab-top-menu>#wp-admin-bar-wp-logo:hover>.ab-item {
+    background: unset;
+}
+#wpadminbar #wp-admin-bar-wp-logo >.ab-item .ab-icon:before {
+    content: '';
+    background-image: url(../../../uploads/2018/10/emblemWhite-icon.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+}
+
+
+
+
+
+
+/* Excerpt */
+#excerpt {
+    height: 300px;
+}
