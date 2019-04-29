@@ -40,21 +40,21 @@ jQuery(document).ready(function() {
 
     setInterval(function() {
       if (bkImgCOunt == bkImgOuterLen) {
+        bkImgOuter.first().fadeIn(800, function() {
+          jQuery(this).addClass("current");
+        });
         bkImgOuter.last().fadeOut(800, function() {
           jQuery(this).removeClass("current");
-          bkImgOuter.first().fadeIn(800, function() {
-            jQuery(this).addClass("current");
-          });
         });
         bkImgCOunt = 0;
       } else {
         bkImgCurrent.fadeOut(800, function() {
           jQuery(this)
-            .removeClass("current")
-            .next(".product-item")
-            .fadeIn(800, function() {
-              jQuery(this).addClass("current");
-            });
+          .next(".product-item")
+          .fadeIn(800, function() {
+            jQuery(this).addClass("current")
+            .removeClass("current");
+          });
           bkImgCOunt++;
         });
       }
@@ -64,3 +64,4 @@ jQuery(document).ready(function() {
     homeBackImgs();
   }
 });
+
