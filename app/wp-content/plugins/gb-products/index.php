@@ -194,11 +194,20 @@ foreach( $taxonomies as $taxonomy ) {
               $product_section .= '</div>';
 
               $product_section .= '<div class="prod-thumbs">';
+
+              
+
               if ( $gallery = get_post_gallery( get_the_ID(), false ) ) :
-                // Loop through all the image and output them one by one.
-                foreach ( $gallery['src'] AS $src ) {
+
+                $ids = explode( ",", $gallery['ids'] );
+
+                foreach( $ids as $id ) {
+
+                $link = wp_get_attachment_url( $id );
+                $src = wp_get_attachment_image_src($id , 'thumbnail');
+
                 $product_section .= '<div class="thumb-wrap gall-img-wrap">';                   
-                $product_section .=  '<img src="' . $src . '" class="gall-img" alt="Product image" />';
+                $product_section .=  '<img src="' . $src[0] . '" class="gall-img" alt="Product image" fullurl="'. $link .'" />';
                 $product_section .= '</div>';
                 }
               endif;

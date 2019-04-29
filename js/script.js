@@ -12,6 +12,7 @@
  *
  * 1.1 Function calls
  * 1.2 Home top fader
+ * 1.3 Home thumbs click
  *
  *
  * 2. window.load
@@ -38,9 +39,11 @@ jQuery(document).ready(function() {
       bkImgCOunt = 0,
       bkImgOuterLen = bkImgOuter.length - 1;
 
+    bkImgOuter.first().fadeIn(800);
+
     setInterval(function() {
       if (bkImgCOunt == bkImgOuterLen) {
-        bkImgOuter.first().fadeIn(800, function() {
+        bkImgOuter.first().fadeIn(0, function() {
           jQuery(this).addClass("current");
         });
         bkImgOuter.last().fadeOut(800, function() {
@@ -48,20 +51,35 @@ jQuery(document).ready(function() {
         });
         bkImgCOunt = 0;
       } else {
-        bkImgCurrent.fadeOut(800, function() {
-          jQuery(this)
+        bkImgCurrent
           .next(".product-item")
-          .fadeIn(800, function() {
-            jQuery(this).addClass("current")
-            .removeClass("current");
-          });
-          bkImgCOunt++;
-        });
+          .fadeIn(0, function() {
+            jQuery(this).addClass("current");
+          })
+          .prev(".product-item")
+          .fadeOut(800)
+          .removeClass("current");
+        bkImgCOunt++;
       }
     }, 6000);
   }
   if (jQuery("body.home").length > 0) {
     homeBackImgs();
   }
-});
 
+  /* 1.3 Home thumbs click */
+  jQuery(".prod-thumbs .thumb-wrap img").on("click", function() {
+    var thumbSrc = jQuery(this).attr("fullurl");
+    jQuery("#large-img > img")
+      .attr("src", thumbSrc)
+      .parent()
+      .fadeIn(800)
+      .on("click", function() {
+        jQuery(this).fadeOut(800, function() {
+          jQuery(this)
+            .children("img")
+            .attr("src", "");
+        });
+      });
+  });
+});
