@@ -5,7 +5,6 @@
  ?>
  <?php get_header(); 
  $about = get_post(49);
- //var_dump($about);
  ?>
 
 <!-- <section id="home-back-vid">

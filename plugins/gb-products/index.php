@@ -378,6 +378,8 @@ foreach( $taxonomies as $taxonomy ) {
 
         $product_section .= '</div>';
 
+        $product_section .= '</div>'; // / .product-type
+
           wp_reset_postdata(); // reset the query
 
       return $product_section;
@@ -387,5 +389,4 @@ foreach( $taxonomies as $taxonomy ) {
 }
 
 add_action('init', 'greyblack_products');
-
 ?>

@@ -10,6 +10,7 @@
  * 2. Add theme and post type support
  * 3. Add custom logo + check for svg
  * 4. Add top section background selector in customizer
+ * 5. Add taxonomy terms meta field
  */
 
  
@@ -143,5 +144,15 @@ function greyblack_set_top_home_back() {
     $style = str_replace( 'body.custom-background', '#top', $style );
     echo $style;
 }
+
+
+/*
+* 5. Add taxonomy terms meta field
+*/
+
+//$taxs = get_object_taxonomies( 'product' );
+//foreach($taxs as $tax){          
+//    greyblack_add_meta_to_terms($tax);
+//}
 
 ?>
