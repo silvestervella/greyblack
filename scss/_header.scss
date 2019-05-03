@@ -9,7 +9,6 @@
     left: 50%;
     transform: translateX(-100%);
     background: rgba($grey, 0.8);
-    display: none;
   }
   #main-nav-outer {
     width: 100%;
@@ -22,7 +21,7 @@
         font-size: 18px;
         width: 70px;
         text-align: center;
-        background: white;
+        background: lighten($grey, 20%);
         color: black;
         padding: 10px;
       }

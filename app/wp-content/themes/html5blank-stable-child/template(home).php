@@ -34,8 +34,8 @@
             </div>
 
             <section id="home-about">
+                <div id="about-back" style="background-image: url(<?php echo get_post_meta( $about->ID, 'post-back', true ) ?>)"></div>
                     <div id="about-wrap">
-                        <div id="about-back" style="background-image: url(<?php echo get_post_meta( $about->ID, 'post-back', true ) ?>)"></div>
                         <div class="excerpt">
                         <?php echo $about->post_excerpt ?>
                         <a href="<?php echo $about->guid ?>">Read more...</a>
@@ -45,6 +45,9 @@
                         </div>
                         <div class="quote"><?php echo get_post_meta( $about->ID, 'quote', true ) ?></div>
                     </div>
+            </section>
+            <section id="home-insta">
+                <?php echo do_shortcode("[get_insta]"); ?>
             </section>
     </div>
     <!-- /posts-sec-outer -->

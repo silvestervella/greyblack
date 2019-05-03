@@ -78,7 +78,7 @@ function greyblack_products() {
     ),
     array(
         'slug'         => 'collection',
-        'single_name'  => 'Pollection',
+        'single_name'  => 'Collection',
         'plural_name'  => 'Collections',
         'post_type'    => 'product',
         'rewrite'      => array( 'slug' => 'collection' ),
@@ -149,11 +149,13 @@ foreach( $taxonomies as $taxonomy ) {
           );
 
           $term = get_term_by('slug', $atts['terms'], 'collection'); 
+          /*
           $name = $term->name;
           $name_no_space = str_replace(" ", "-", $name);
 
           $stack = array();
           array_push($stack, $name);
+          */
 
           $query1 = new WP_query ( $args );
           while($query1->have_posts()) : $query1->the_post();
@@ -193,9 +195,8 @@ foreach( $taxonomies as $taxonomy ) {
               $product_section .= strip_shortcodes(get_the_content( ));
               $product_section .= '</div>';
 
+              /*
               $product_section .= '<div class="prod-thumbs">';
-
-              
 
               if ( $gallery = get_post_gallery( get_the_ID(), false ) ) :
 
@@ -212,11 +213,13 @@ foreach( $taxonomies as $taxonomy ) {
                 }
               endif;
               $product_section .= '</div>';
+              
 
               $product_section .= '<div class="az-link">';
               $product_section .= '<a href="" target="_blank">BUY</a>';
               $product_section .= '<span> ...directly from Amazon</span>';
               $product_section .= '</div>';
+              */
 
               $product_section .= '</div>';
 

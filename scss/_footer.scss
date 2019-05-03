@@ -1,8 +1,36 @@
 #copy {
-    position: absolute;
-    top: calc(50% + 50px);
-    right: 20px;
-    transform: translateY(50%) rotate(90deg);
-    transform-origin: center right;
-    color: white
+  position: fixed;
+  top: calc(50% + 50px);
+  right: 20px;
+  transform: translateY(50%) rotate(90deg);
+  transform-origin: center right;
+  color: $primary;
+}
+
+footer {
+  //background: $grey;
+  padding: 70px 0;
+  .ft-section {
+    padding: 30px 0;
+    max-width: 80%;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    border-bottom: 1px solid lighten($primary, 55%);
+    &:last-child {
+      border: 0;
+    }
+    h3 {
+      font-size: 16px;
+      font-family: $heading-font;
+      padding-bottom: 15px;
+      color: lighten($primary, 40%);
+    }
+    a {
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 11px;
+      color: lighten($primary, 28%);
+      text-transform: uppercase;
+    }
+  }
 }
