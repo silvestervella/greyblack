@@ -1,21 +1,38 @@
 #header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100px;
   top: 0;
   z-index: 999;
+  transition: all 1s ease;
+  &.fixed {
+    position: fixed;
+    height: 50px;
+    background: darken($grey , 50%);
+    box-shadow: 0 5px 12px -2px darken($grey, 50%);
+    #logo {
+      background: unset;
+      transform: translateX(-50%);
+    }
+  }
   #logo {
     position: absolute;
     left: 50%;
     transform: translateX(-100%);
     background: rgba($grey, 0.8);
+    height: 100%;
+    img {
+      height: 100%;
+    }
   }
   #main-nav-outer {
     width: 100%;
     .navbar {
       width: 100%;
       #menu-button {
-        margin: 30px 0px auto auto;
+        position: fixed;
+        top: 100px;
+        right: 0;
         font-family: $heading-font;
         display: block;
         font-size: 18px;

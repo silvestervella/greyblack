@@ -45,13 +45,13 @@ main {
             width: calc(40% - 40px);
             padding: 20px;
             h4 {
-              font-size: 35px;
+              font-size: 50px;
               color: $grey;
-              font-family: $heading-font;
+              @include heading;
               a {
                 text-decoration: none;
                 .collection-title {
-                  font-size: 20px;
+                  font-size: 16px;
                   font-style: italic;
                   color: white;
                   padding-left: 10px;
@@ -112,7 +112,7 @@ main {
         padding: 25px 40px;
         display: block;
         font-family: $heading-font;
-        font-size: 16px;
+        font-size: 18px;
       }
     }
     #large-img {
@@ -158,17 +158,17 @@ main {
           width: 30%;
           display: inline-block;
           h3 {
-            font-family: $heading-font;
             font-size: 25px;
             padding-bottom: 10px;
+            @include heading;
           }
           a {
             display: inline-block;
             margin-top: 30px;
             text-decoration: none;
             padding: 10px;
-            border-bottom: 1px solid $accent;
-            border-top: 1px solid $accent;
+            border-bottom: 1px solid $grey;
+            border-top: 1px solid $grey;
             border-radius: 2.5px;
             width: auto;
           }
@@ -202,13 +202,13 @@ main {
         left: 65%;
         top: 50%;
         transform: translate(-50%, -50%);
-        background: rgba($grey, 0.8);
+        background: rgba(lighten($grey, 20%), 0.8);
         padding: 50px 100px;
         h3 {
           a {
-            font-family: $heading-font;
-            font-size: 15px;
+            font-size: 18px;
             text-decoration: none;
+            @include heading;
             span {
               font-family: $main-font;
               font-size: 25px;
@@ -224,6 +224,7 @@ main {
           left: 25%;
           top: 25%;
           width: 300px;
+          overflow: hidden;
           img {
             width: 100%;
           }
@@ -236,6 +237,7 @@ main {
             top: 55%;
           }
           .img-overlay {
+            display: none;
             position: absolute;
             height: 100%;
             width: 100%;

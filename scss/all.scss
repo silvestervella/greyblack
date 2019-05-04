@@ -1,7 +1,9 @@
-@import 'generic';
+@import "generic";
 
-@import 'header';
+@import "mixins";
 
-@import 'home';
+@import "header";
 
-@import 'footer';
+@import "home";
+
+@import "footer";

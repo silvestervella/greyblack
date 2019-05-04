@@ -13,6 +13,7 @@
  * 1.1 Function calls
  * 1.2 Home top fader
  * 1.3 Home thumbs click
+ * 1.4 Instagram posts overlay
  *
  *
  * 2. window.load
@@ -26,7 +27,30 @@
  *
  */
 
+/* 0.2 Functions */
+var myScrollFunction = function() {
+  var header = jQuery("#header"),
+    top_of_screen = jQuery(window).scrollTop();
+
+  /* 0.2.2.1 Sticky heder */
+  if (top_of_screen >= 150) {
+    header.addClass("fixed");
+    /*
+  ourMenuLink.css({
+    opacity: "0"
+  }); */
+  } else {
+    header.removeClass("fixed");
+    /*
+  ourMenuLink.css({
+    opacity: "1"
+  }); */
+  }
+};
+
 jQuery(document).ready(function() {
+  /* 1.1 Function calls */
+
   /* 1.2 Home top fader */
   var homeProdOuter = jQuery(".product-item");
   jQuery(homeProdOuter)
@@ -82,4 +106,16 @@ jQuery(document).ready(function() {
         });
       });
   });
+
+  /* 1.4 Instagram posts overlay */
+  jQuery(".insta-post").on("hover", function() {
+    jQuery(this)
+      .children(".img-overlay")
+      .slideToggle("slow");
+  });
 });
+
+/**
+ * 3. Event listenners
+ */
+window.addEventListener("scroll", myScrollFunction);
