@@ -8,7 +8,7 @@
   &.fixed {
     position: fixed;
     height: 50px;
-    background: darken($grey , 50%);
+    background: darken($grey, 50%);
     box-shadow: 0 5px 12px -2px darken($grey, 50%);
     #logo {
       background: unset;
@@ -18,8 +18,7 @@
   #logo {
     position: absolute;
     left: 50%;
-    transform: translateX(-100%);
-    background: rgba($grey, 0.8);
+    transform: translateX(-50%);
     height: 100%;
     img {
       height: 100%;
@@ -45,6 +44,15 @@
       #nav-collapse {
         display: none;
       }
+    }
+  }
+}
+
+body.home {
+  #header {
+    #logo {
+      transform: translateX(-100%);
+      background: rgba($grey, 0.8);
     }
   }
 }

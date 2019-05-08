@@ -10,7 +10,6 @@
  * 2. Add theme and post type support
  * 3. Add custom logo + check for svg
  * 4. Add top section background selector in customizer
- * 5. Add taxonomy terms meta field
  */
 
  

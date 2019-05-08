@@ -1,0 +1,70 @@
+body.tax-collection {
+  .prod-outer {
+    min-height: calc(100vh - 100px);
+    position: relative;
+    width: 90%;
+    margin-top: 100px;
+    .prod-left {
+      position: relative;
+      height: 100%;
+      width: 50%;
+      .prod-title {
+        h2 {
+          color: darken($grey, 5%);
+          font-family: $heading-font;
+          font-weight: 300;
+          font-size: 50px;
+          text-align: right;
+          padding: 100px 30px 0px 0px;
+        }
+      }
+      .prod-info {
+        .prod-content {
+          padding: 50px 30px 0 0;
+          text-align: right;
+          color: darken($grey, 15%);
+        }
+      }
+      .az-link {
+        padding: 50px 0 0 0;
+        text-align: center;
+        a {
+          text-decoration: none;
+          display: inline-block;
+          padding: 10px 20px;
+          border-bottom: 1px solid $accent;
+          border-top: 1px solid $accent;
+          border-radius: 2.5px;
+          color: $primary;
+        }
+        span {
+          color: $primary;
+          font-size: 13px;
+        }
+      }
+      .prod-thumbs {
+        text-align: center;
+        padding-top: 40px;
+        .gall-img-wrap {
+          display: inline-block;
+          margin: 30px 10px;
+        }
+      }
+    }
+    .prod-right {
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      right: 0;
+      top: 0;
+      .tax-back-img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-attachment: fixed;
+      }
+    }
+  }
+}

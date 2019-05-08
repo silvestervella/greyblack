@@ -1,0 +1,104 @@
+body.page-template-templateproducts {
+  #products {
+    width: 90%;
+    .product-type {
+      position: relative;
+      width: 100%;
+      margin-top: 100px;
+      min-height: calc(100vh - 100px);
+      .items {
+        position: relative;
+        height: 100%;
+        width: 60%;
+        top: 0;
+        left: 0;
+        .product-item {
+          &:nth-child(3n) {
+            .product-cont {
+              border: 0;
+            }
+          }
+          &:last-child {
+            .product-cont {
+              border: 0;
+            }
+          }
+          width: 320px;
+          text-align: center;
+          position: relative;
+          height: 100%;
+          display: inline-block;
+          .product-cont {
+            margin-top: 100px;
+            margin: 20px 0px 30px 10px;
+            padding: 0 30px;
+            border-right: 1px solid lighten($grey, 15%);
+            .product-thumbs {
+              display: inline-block;
+              .thumb-wrap {
+                padding: 5px;
+                display: inline-block;
+                img {
+                  width: auto;
+                  height: 250px;
+                }
+              }
+            }
+            .prod-info {
+              display: inline-block;
+              text-align: left;
+              width: 100%;
+              margin-top: 10px;
+              h4 {
+                text-align: center;
+                text-decoration: none;
+                color: $primary;
+                font-family: $heading-font;
+                font-weight: 300;
+                font-size: 20px;
+              }
+              .view-link {
+                margin-top: 10px;
+                text-align: center;
+                a {
+                  text-decoration: none;
+                  display: inline-block;
+                  padding: 10px 20px;
+                  border-bottom: 1px solid $accent;
+                  //border-top: 1px solid $accent;
+                  border-radius: 2.5px;
+                  color: $primary;
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .type-image {
+        position: absolute;
+        height: 100%;
+        width: 40%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-attachment: fixed;
+        right: 0%;
+        top: 0;
+      }
+    }
+  }
+  .product-type-title {
+    position: sticky;
+    top: 200px;
+    left: 100%;
+    background: black;
+    color: $grey;
+    padding: 20px 50px;
+    width: auto;
+    display: inline-block;
+    transform: translateX(50%);
+    min-width: 100px;
+    text-align: center;
+  }
+}

@@ -160,12 +160,12 @@ foreach( $taxonomies as $taxonomy ) {
           $query1 = new WP_query ( $args );
           while($query1->have_posts()) : $query1->the_post();
           $amazonLink = esc_url(get_post_meta(get_the_ID(), "amazon-link", true ));
-          $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+          $postBack = esc_url(get_post_meta(get_the_ID(), "post-back", true ));
 
               $product_section .= '<div class="product-item">';
 
               $product_section .= '<div class="product-info-wrap">';
-              $product_section .= '<div class="feat-img-wrap" style="background-image: url('.esc_url($featured_img_url).')">'; 
+              $product_section .= '<div class="feat-img-wrap" style="background-image: url('.esc_url($postBack).')">'; 
               $product_section .= '<div id="home-prods-overlay">';
               $product_section .= '<div class="left"></div>';
               $product_section .= '<div class="right"></div>';
@@ -299,7 +299,8 @@ foreach( $taxonomies as $taxonomy ) {
                 $product_section .= '</div>';
   
                 $product_section .= '<div class="az-link">';
-                $product_section .= '<a href="" target="_blank">Buy from Amazon</a>';
+                $product_section .= '<a href="" target="_blank">BUY</a>';
+                $product_section .= '<span> ...directly from Amazon</span>';
                 $product_section .= '</div>';
                 
             endwhile;
@@ -337,11 +338,11 @@ foreach( $taxonomies as $taxonomy ) {
 
           $term = get_term_by('slug', $atts['terms'], $atts['taxonomy']); 
           $name = $term->name;
+          $term_back_img = get_term_meta($term->term_id , "__term_meta_text");
 
           $product_section .= '<div class="product-type">';
-          $product_section .= '<div class="product-type-title">';
-          $product_section .= $name;
-          $product_section .= '</div>';
+
+          $product_section .= '<div class="items">';
 
           $query1 = new WP_query ( $args );
           while($query1->have_posts()) : $query1->the_post();
@@ -349,11 +350,14 @@ foreach( $taxonomies as $taxonomy ) {
 
               $product_section .= '<div class="product-item">';
 
+              $product_section .= '<div class="product-cont">';
+
               $product_section .= '<div class="product-thumbs">';
-              $product_section .= '<div class="thumb-wrap feat-img-wrap">';
+              $product_section .= '<div class="thumb-wrap feat-img-wrap gall-img-wrap">';
               $product_section .= get_the_post_thumbnail( );
               $product_section .= '</div>';
 
+              /*
               if ( $gallery = get_post_gallery( get_the_ID(), false ) ) :
                 // Loop through all the image and output them one by one.
                 foreach ( $gallery['src'] AS $src ) {
@@ -362,24 +366,30 @@ foreach( $taxonomies as $taxonomy ) {
                 $product_section .= '</div>';
                 }
               endif;
+              */
 
-              $product_section .= '<h4 class="product-title">';
-              $product_section .= get_the_title( );
-              $product_section .= '</h4>';
-
-              $product_section .= '<div class="product-content">';
-              $product_section .= strip_shortcodes(get_the_content( ));
               $product_section .= '</div>';
 
-              $product_section .= '<div class="az-link">';
-              $product_section .= '<a href="" target="_blank">Buy from Amazon</a>';
+              $product_section .= '<div class="prod-info">';
+              $product_section .= '<h4 class="product-title">'.get_the_title( ).'</h4>';
+
+              $product_section .= '<div class="view-link">';
+              $product_section .= '<a href="'.get_post_permalink().'">View</a>';
               $product_section .= '</div>';
-              
-              
+
+              $product_section .= '</div>';
+
+              $product_section .= '</div>';
               $product_section .= '</div>';
           endwhile;
 
-        $product_section .= '</div>';
+          $product_section .= '</div>'; // items
+
+          $product_section .= '<div class="type-image" style="background-image: url('.$term_back_img[0].')">';
+          $product_section .= '<div class="product-type-title">';
+          $product_section .= $name;
+          $product_section .= '</div>';
+          $product_section .= '</div>';
 
         $product_section .= '</div>'; // / .product-type
 
