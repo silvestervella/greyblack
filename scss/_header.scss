@@ -8,11 +8,14 @@
   &.fixed {
     position: fixed;
     height: 50px;
-    background: darken($grey, 50%);
-    box-shadow: 0 5px 12px -2px darken($grey, 50%);
+    right: 0;
+    top: 30px;
     #logo {
+      left: unset;
+      right: 0;
+      transform: unset;
+      width: 10%;
       background: unset;
-      transform: translateX(-50%);
     }
   }
   #logo {
@@ -50,6 +53,12 @@
 
 body.home {
   #header {
+    &.fixed {
+      #logo {
+        transform: unset;
+        background: unset;
+      }
+    }
     #logo {
       transform: translateX(-100%);
       background: rgba($grey, 0.8);

@@ -33,24 +33,6 @@ function greyblack_products() {
   )
   );
 
-  register_post_type( 'advert',
-  array(
-    'labels' => array(
-      'name' => __( 'Advert' ),
-      'singular_name' => __( 'Advert' )
-    ),
-    'public' => false,  // it's not public, it shouldn't have it's own permalink, and so on
-    'publicly_queryable' => true,  // you should be able to query it
-    'show_ui' => true,  // you should be able to edit it in wp-admin
-    'exclude_from_search' => false,  // you should exclude it from search results
-    'show_in_nav_products' => false,  // you shouldn't be able to add it to products
-    'has_archive' => false,  // it shouldn't have archive page
-    'rewrite' => false,  // it shouldn't have rewrite rules
-    //'taxonomies'  => array( 'item_type' , 'gender' ),
-    'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields','excerpt' ),
-  )
-  );
-
   $taxonomies = array(
     array(
         'slug'         => 'item_type',
@@ -82,14 +64,6 @@ function greyblack_products() {
         'plural_name'  => 'Collections',
         'post_type'    => 'product',
         'rewrite'      => array( 'slug' => 'collection' ),
-        'hierarchical' => true,
-    ),
-    array(
-        'slug'         => 'ad_placement',
-        'single_name'  => 'Placement',
-        'plural_name'  => 'Placement',
-        'post_type'    => 'advert',
-        'rewrite'      => array( 'slug' => 'ad_placement' ),
         'hierarchical' => true,
     )
 );
@@ -235,82 +209,6 @@ foreach( $taxonomies as $taxonomy ) {
       return $product_section;
   }
   add_shortcode( 'get_product_items' , 'greyblack_generate_product_posts_home' );
-
-
- 
-/**
- * 
- * 
- * Display top adverts in home page
- * 
- * 
- */
-    function greyblack_generate_home_top_adverts($atts) {
-        $product_section = '';
-        $product_section_home = '';
-  
-            $args = array(
-                'post_type' => 'advert',
-                'posts_per_page' => $atts['posts_per_page'],
-                'orderby' => $atts['orderby'],
-                'order' => $atts['order'],
-                'tax_query' => array(
-                    array(
-                        'taxonomy' => $atts['taxonomy'],
-                        'field' => 'slug',
-                        'terms' => $atts['terms'],
-                    )
-                )
-            );
-  
-            $term = get_term_by('slug', $atts['terms'], $atts['taxonomy']); 
-            $name = $term->name;
-            $name_no_space = str_replace(" ", "-", $name);
-  
-            $stack = array();
-            array_push($stack, $name);
-  
-            $query1 = new WP_query ( $args );
-            while($query1->have_posts()) : $query1->the_post();
-            $amazonLink = esc_url(get_post_meta(get_the_ID(), "amazon-link", true ));
-  
-                $product_section .= '<div class="product-item">';
-  
-                $product_section .= '<div class="product-thumbs">';
-                $product_section .= '<div class="thumb-wrap feat-img-wrap">';
-                $product_section .= get_the_post_thumbnail( );
-                $product_section .= '</div>';
-  
-                if ( $gallery = get_post_gallery( get_the_ID(), false ) ) :
-                  // Loop through all the image and output them one by one.
-                  foreach ( $gallery['src'] AS $src ) {
-                  $product_section .= '<div class="thumb-wrap gall-img-wrap">';                   
-                  $product_section .=  '<img src="' . $src . '" class="gall-img" alt="Product image" />';
-                  $product_section .= '</div>';
-                  }
-                endif;
-  
-                $product_section .= '<h4 class="product-title">';
-                $product_section .= get_the_title( );
-                $product_section .= '</h4>';
-  
-                $product_section .= '<div class="product-content">';
-                $product_section .= strip_shortcodes(get_the_content( ));
-                $product_section .= '</div>';
-  
-                $product_section .= '<div class="az-link">';
-                $product_section .= '<a href="" target="_blank">BUY</a>';
-                $product_section .= '<span> ...directly from Amazon</span>';
-                $product_section .= '</div>';
-                
-            endwhile;
-  
-            wp_reset_postdata(); // reset the query
-  
-        return $product_section;
-    }
-    add_shortcode( 'get_product_items' , 'greyblack_generate_home_top_adverts' );
-
 
 
 /**

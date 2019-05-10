@@ -28,6 +28,7 @@
  */
 
 /* 0.2 Functions */
+
 var myScrollFunction = function() {
   var header = jQuery("#header"),
     top_of_screen = jQuery(window).scrollTop();
@@ -35,16 +36,8 @@ var myScrollFunction = function() {
   /* 0.2.2.1 Sticky heder */
   if (top_of_screen >= 150) {
     header.addClass("fixed");
-    /*
-  ourMenuLink.css({
-    opacity: "0"
-  }); */
   } else {
     header.removeClass("fixed");
-    /*
-  ourMenuLink.css({
-    opacity: "1"
-  }); */
   }
 };
 

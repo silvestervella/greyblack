@@ -7,14 +7,14 @@
  $about = get_post(49);
  ?>
 
-<!-- <section id="home-back-vid">
- <?php /* echo greyblack_generate_home_top_adverts(array(
+ <section id="home-back-vid">
+ <?php  echo greyblack_generate_home_top_adverts(array(
                 'posts_per_page' => '0',
                 'orderby' => 'date',
                 'order' => 'ASC',
                 'taxonomy' => 'ad_placement',
-                'terms' => 'home-top' ) ); */ ?>
- </section> --> 
+                'terms' => 'home-top' ) );  ?>
+ </section> 
 
 <main role="main">
     <div class="posts-sec-outer">
@@ -25,10 +25,10 @@
                 'order' => 'ASC',
                 'taxonomy' => 'placement',
                 'terms' => 'home' ) ); ?>
+                 <div id="link-to-prods">
+                    <a href="<?php echo get_post_permalink(23) ?>">view more..</a>
+                </div>
             </section>
-            <div id="link-to-prods">
-                <a href="<?php echo get_post_permalink(23) ?>">view more..</a>
-            </div>
             <div id="large-img">
                 <img src="" alt="product image" />
             </div>
