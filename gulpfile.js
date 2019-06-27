@@ -26,7 +26,7 @@ var globs = [
 var conn = ftp.create({
   host: "ftp.silvestervella.com",
   user: "silvevf4",
-  password: "g5HMAywI7t1P!",
+  password: "",
   parallel: 10,
   log: gutil.log
 });
