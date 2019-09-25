@@ -1,0 +1,4 @@
+[14-May-2019 23:06:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/silvevf4/public_html/wp-content/themes/html5blank-stable/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/silvevf4/public_html/wp-content/themes/html5blank-stable/index.php on line 1

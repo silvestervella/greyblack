@@ -20,11 +20,17 @@
 					?>
 			</footer>
 			<!-- /footer -->
-		</div>
-		<!-- /wrapper -->
+
 		<div id="copy">&copy;GreyBlack - <?php echo date("Y"); ?></div>
 
 		<?php wp_footer(); ?>
+
+		<div id="nav-collapse">
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+		</div>
+
+		</div>
+		<!-- /wrapper -->
 
 	</body>
 </html>

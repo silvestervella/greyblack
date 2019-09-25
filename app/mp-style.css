@@ -1,29 +1,45 @@
 html , body {
     width: 100%;
     height: 100%;
-    background: url(logo-back2.jpg);
     margin: 0;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dddddd+0,dddddd+50,a6a6a6+51,a6a6a6+100 */
+background: #fff; /* Old browsers */
+
+}
+body {
+background: white;
 }
 #center {
-    width: 70%;
-    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    top: 0%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
+}
+
+
+.prod-img {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    margin-top: 200px;
+}
+
+.prod-img img {
+    width: 100%;
 }
 
 #center img {
     width: 100%;
+    max-width: 300px;
+    padding-top: 30px
 }
 
-#center h1 {
+#center p {
     width: 100%;
-    text-align: center;
     font-family: 'Cormorant Unicase', serif;
-    color: #b7b7b7;
+    color: #898989;
     font-size: 22px;
-    word-spacing: 15px;
+
 }
 
 #soon {

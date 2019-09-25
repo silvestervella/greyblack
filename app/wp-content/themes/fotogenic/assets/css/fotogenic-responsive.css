@@ -1,0 +1,331 @@
+/* Large desktop */
+    @media (max-width: 1400px) {
+    .masonary_excerpt {
+        font-size: 14px;
+    }
+    .masonry-content-wrapper .masonry_title {
+        font-size: 24px;
+    }
+    .masonry_item:hover .masonry-content-wrapper {
+        bottom: 0px;
+    }
+}
+@media (max-width: 1200px) {
+    .mt-container {
+        width: 100%;
+        padding: 0 2%;
+    }
+    .boxed-layout #page{
+        width: 100%;
+    }
+    #site-navigation {
+        width: 57%;
+    }
+    #site-navigation ul li a {
+        padding: 0 15px;
+    }
+    .site-branding {
+        width: 20%;
+    }
+    #masthead .mt-search-social-wrapper {
+        width: 22%;
+    }
+    .masonry_item {
+        width: 33.33%;
+    }
+    .masonary_excerpt {
+        display: none;
+    }
+    .blog-desc {
+        font-size: 14px;
+    }
+    .blog-title {
+        font-size: 22px;
+    }
+    .blog-content-wrapper {
+        padding: 50px 40px;
+        width: 100%;
+    }
+    .btn.blog-btn {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 980px) {
+    #site-navigation {
+        display: inline-block !important;
+    }
+}
+
+ 
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 979px) {
+    #site-navigation {
+        display: none;
+    }
+    .site-branding {
+        width: 40%;
+    }
+    #masthead .mt-search-social-wrapper {
+        width: 59%;
+    }
+    #masthead .menu-toggle {
+        display: inline-block;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    #masthead .menu-toggle i {
+        margin-left: 5px;
+    }
+    #site-navigation {
+        background: #212121 none repeat scroll 0 0;
+        display: none;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        z-index: 9999;
+    }
+    #site-navigation ul li {
+        display: block;
+        float: none;
+    }
+    .sub-toggle {
+        background: #fff none repeat scroll 0 0;
+        color: #333;
+        cursor: pointer;
+        display: block;
+        height: 24px;
+        line-height: 25px;
+        position: absolute;
+        right: 15px;
+        text-align: center;
+        top: 11px;
+        width: 24px;
+    }
+    #site-navigation ul>li:hover>.sub-toggle,
+    #site-navigation ul>li.current-menu-item .sub-toggle,
+    #site-navigation ul>li.current-menu-ancestor .sub-toggle {
+        background: #fff;
+    }
+     #site-navigation li.current-menu-item>.sub-toggle {
+        background: #333 none repeat scroll 0 0;
+    }
+     #site-navigation li.current-menu-item>.sub-toggle i {
+        color: #333;
+    }
+    #site-navigation ul li a {
+        padding: 3px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .menu-primary-container .sub-menu,
+    #site-navigation li.menu-item-has-children>a:before,
+    #site-navigation ul li.page_item_has_children>a:before {
+        display: none;
+    }
+    #site-navigation ul.sub-menu, 
+    #site-navigation ul.children {
+        position: static;
+        min-width: 100%;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        visibility: visible;
+        display: none;
+        background: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        box-shadow: none;
+        transform: scaley(1);
+        -webkit-transform: scaley(1);
+        -ms-transform: scaley(1);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+    }
+    #site-navigation ul > li:hover > .sub-menu,
+    #site-navigation ul > li:hover > .children {
+        top: 0;
+    }
+    #site-navigation ul#primary-menu>li:hover>a::after,
+    #site-navigation ul#primary-menu>li.current-menu-item>a::after {
+        display: none;
+    }
+    #site-navigation ul#primary-menu > li.menu-item-has-children > a, 
+    #site-navigation #primary-menu ul > li.page_item_has_children > a {
+        padding-right: 0;
+    }
+    #site-navigation ul ul li a{
+        color: #fff;
+    }
+    .hero_image_title {
+        font-size: 40px;
+    }
+    .hero_image_desc {
+        font-size: 16px;
+        width: 65%;
+    }
+    .hero_image_btn {
+        padding: 5px 15px;
+        font-size: 16px;
+    }
+    .icon-scroll {
+        display: none;
+    }
+    .section-wrapper {
+        padding: 80px 0;
+        text-align: center;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .about-desc {
+        font-size: 20px;
+        margin: 50px 0;
+    }
+    .fotogenic_masonry_images .masonry_item {
+        width: 50%;
+    }
+    .testimonial-content {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .blog-desc {
+        display: none;
+    }
+    .blog-title {
+        font-size: 18px;
+    }
+    .footer-widget-area-wrapper {
+        width: 100%;
+        float: none;
+        margin-bottom: 30px;
+    }
+    .site-info {
+        width: 100%;
+        text-align: center;
+    }
+    #colophon {
+        padding: 50px 0 20px;
+    }
+    .error-404.not-found {
+        width: 100%;
+    }
+    .error-num {
+        font-size: 100px;
+        line-height: 1.5;
+    }
+    .fotogenic-header-img {
+        padding: 120px 0 30px;
+    }
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    .masonry-content-wrapper .masonry_title {
+        font-size: 20px;
+        margin: 0;
+    }
+    .blog_content {
+        width: 100%;
+    }
+    .gallery-columns-3 .gallery-item {
+        max-width: 48%;
+    }
+    #primary, .home.blog #primary{
+        width: 100%;
+        float: none;
+    }
+    #secondary, .home.blog #secondary {
+        float: none;
+        width: 100%;
+    }
+    #hero_video-bg {
+        height: 100% !important;
+    }
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 600px) {
+    .hero_image_title {
+        font-size: 24px;
+    }
+    .hero_image_subtitle {
+        font-size: 14px;
+    }
+    .hero_image_desc {
+        font-size: 14px;
+        width: 80%;
+    }
+    .hero_image_btn {
+        font-size: 13px;
+    }
+    .section-wrapper {
+        padding: 40px 0;
+    }
+    .section-title {
+        font-size: 22px;
+    }
+    .section-title::after {
+        width: 40px;
+        margin-left: -20px;
+    }
+    .about-desc {
+        font-size: 16px;
+        margin: 30px 0px;
+    }
+    .about_btn a {
+        font-size: 14px;
+    }
+    .fotogenic_masonry_images .masonry_item {
+        width: 100%;
+    }
+    .testimonial-content {
+        padding: 0 30px;
+    }
+    .footer-widget-area-wrapper .mt-footer-coumn {
+        width: 100%;
+        float: none;
+        margin: 0 0 3%;
+        text-align: center;
+    }
+    .testimonial-content::before {
+        left: 0;
+    }
+    .site-branding {
+        width: 30%;
+    }
+    #masthead .mt-search-social-wrapper {
+        width: 69%;
+    }
+    .mt-single-title-meta-wrap .entry-title {
+        font-size: 22px;
+    }
+    .gallery .gallery-item {
+        max-width: 100% !important;
+    }
+}
+@media (max-width: 480px) {
+    .mt-scroll-up {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        right: 20px;
+    }
+    .site-branding {
+        width: 50%;
+        float: none;
+        margin: 0 auto 10px;
+        display: block;
+    }
+    #masthead .mt-search-social-wrapper {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

@@ -36,8 +36,8 @@ function greyblack_products() {
   $taxonomies = array(
     array(
         'slug'         => 'item_type',
-        'single_name'  => 'Type',
-        'plural_name'  => 'Types',
+        'single_name'  => 'Product',
+        'plural_name'  => 'Products',
         'post_type'    => 'product',
         'rewrite'      => array( 'slug' => 'item_type' ),
         'hierarchical' => true,

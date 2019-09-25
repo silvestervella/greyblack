@@ -1,0 +1,854 @@
+# Copyright (C) 2017 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2019-02-14 16:13+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
+
+#: 404.php:19
+msgid "404"
+msgstr ""
+
+#: 404.php:19
+msgid "error"
+msgstr ""
+
+#: 404.php:21 inc/mt-custom-hooks.php:176
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location."
+msgstr ""
+
+#. translators: 1: title.
+#: comments.php:37
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:43
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:49
+msgid "Primary"
+msgstr ""
+
+#: functions.php:125
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:127 functions.php:137 functions.php:147 functions.php:157
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:135
+msgid "Footer Widget Area One"
+msgstr ""
+
+#: functions.php:145
+msgid "Footer Widget Area Two"
+msgstr ""
+
+#: functions.php:155
+msgid "Footer Widget Area Three"
+msgstr ""
+
+#: inc/mt-custom-hooks.php:100
+msgid "menu"
+msgstr ""
+
+#. translators: %s: search query.
+#: inc/mt-custom-hooks.php:183
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/mt-custom-hooks.php:233 inc/customizer/kirki-homepage-panel.php:61
+msgid "Fashion"
+msgstr ""
+
+#: inc/mt-custom-hooks.php:236 inc/customizer/kirki-homepage-panel.php:70
+msgid "Creative Photoshoot"
+msgstr ""
+
+#: inc/mt-custom-hooks.php:237 inc/customizer/kirki-homepage-panel.php:79
+msgid ""
+"Cupcake ipsum dolor sit amet jujubes. Bear claw chocolate cake bear claw "
+"marshmallow. Carrot cake tart cotton candy."
+msgstr ""
+
+#: inc/mt-custom-hooks.php:240 inc/customizer/kirki-homepage-panel.php:88
+msgid "View Our Works"
+msgstr ""
+
+#: inc/template-functions.php:107
+msgctxt "Archivo: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/template-functions.php:108
+msgctxt "Playfair Display: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/template-functions.php:191
+msgid "Select Category"
+msgstr ""
+
+#. %s: post date.
+#: inc/template-tags.php:31
+#, php-format
+msgctxt "post date"
+msgid " %s"
+msgstr ""
+
+#. %s: post author.
+#: inc/template-tags.php:49
+#, php-format
+msgctxt "post author"
+msgid " %s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:68
+msgid ", "
+msgstr ""
+
+#. 1: list of categories.
+#: inc/template-tags.php:71
+#, php-format
+msgid " %1$s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:75
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:78
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#. translators: %s: post title
+#: inc/template-tags.php:88
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:105 template-parts/content-page.php:36
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: template-parts/content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:25
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:45
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:23 template-parts/content.php:55
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:44
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:34
+msgid "About"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:72
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: inc/about/mt-about-theme.php:76
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:92
+msgid "Dismiss"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:93
+#, php-format
+msgid "Welcome to %s"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:94
+#, php-format
+msgid ""
+"Welcome! Thank you for choosing Fotogenic! To fully take advantage of the "
+"best our theme can offer please make sure you visit our %1$s welcome page "
+"%2$s."
+msgstr ""
+
+#: inc/about/mt-about-theme.php:95
+msgid "Get started with Fotogenic"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:113
+#, php-format
+msgid "About %1$s"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:125
+msgid "Theme Info"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:127
+msgid "View Demo"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:129 inc/about/mt-about-theme.php:206
+msgid "View PRO version"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:131
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:140
+msgid "Free Vs Pro"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:144
+msgid "More Themes"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:148
+msgid "Changelog"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:186
+msgid "Theme Customizer"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:187
+msgid "All Theme Options are available via Customize screen."
+msgstr ""
+
+#: inc/about/mt-about-theme.php:188 inc/about/mt-about-theme.php:273
+msgid "Customize"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:192 inc/about/mt-about-theme.php:194
+msgid "Documentation"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:193
+msgid "Please view our documentation page to setup the theme."
+msgstr ""
+
+#: inc/about/mt-about-theme.php:198
+msgid "Got theme support question?"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:199
+msgid "Please put it in our dedicated support forum."
+msgstr ""
+
+#: inc/about/mt-about-theme.php:200
+msgid "Support"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:204
+msgid "Need more features?"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:205 inc/about/mt-about-theme.php:435
+msgid "Upgrade to PRO version for more exciting features."
+msgstr ""
+
+#: inc/about/mt-about-theme.php:210
+msgid "Have you need customization?"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:211
+msgid "Please send message with your requirement."
+msgstr ""
+
+#: inc/about/mt-about-theme.php:212
+msgid "Customization"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:217
+msgid "Click below to translate this theme into your own language."
+msgstr ""
+
+#: inc/about/mt-about-theme.php:228
+msgid "Return to Updates"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:228
+msgid "Return to Dashboard &rarr; Updates"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:231
+msgid "Go to Dashboard &rarr; Home"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:231
+msgid "Go to Dashboard"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:271
+msgid "Active"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:310
+msgid "Activate"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:319
+msgid "Install Now"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:322
+msgid "Live Preview"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:383
+msgid "View changelog below:"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:440
+msgid "Features"
+msgstr ""
+
+#. Name of the theme
+#: inc/about/mt-about-theme.php:441
+msgid "Fotogenic"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:442
+msgid "Fotogenic Pro"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:447
+msgid "Price"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:448
+msgid "Free"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:449
+msgid "$55"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:452
+msgid "Import Demo Data"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:457
+msgid "Pre Loaders"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:462
+msgid "Header Layouts"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:463 inc/about/mt-about-theme.php:473
+#: inc/about/mt-about-theme.php:513
+msgid "1"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:464 inc/about/mt-about-theme.php:469
+#: inc/about/mt-about-theme.php:474
+msgid "3"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:467
+msgid "Archive Pages Layouts"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:468 inc/about/mt-about-theme.php:514
+msgid "2"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:472
+msgid "Single Page Layouts"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:477
+msgid "Google Fonts"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:479
+msgid "600+"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:482
+msgid "Typography Options"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:487
+msgid "WooCommerce Compatible"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:492
+msgid "Instagram Feature"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:497
+msgid "Section Drag & Drop"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:502
+msgid "Custom 404 Page"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:507
+msgid "Animation on Section"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:512
+msgid "Bottom Footer Layouts"
+msgstr ""
+
+#: inc/about/mt-about-theme.php:520
+msgid "View Pro"
+msgstr ""
+
+#: inc/customizer/customizer.php:22
+msgid "Innerpages Header Image"
+msgstr ""
+
+#: inc/customizer/customizer.php:53
+msgid "Buy Fotogenic Pro"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-additional-panels.php:16
+msgid "Additional Setting"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-additional-panels.php:27
+msgid "Extra Header Setting"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-additional-panels.php:36
+msgid "Enable Search Icon"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-additional-panels.php:46
+msgid "Enable Sticky Menu"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-additional-panels.php:60
+msgid "Social Icon Setting"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-additional-panels.php:69
+msgid "Add Social Icons here"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-additional-panels.php:70
+msgid "Drag & Drop items to re-arrange the order"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-additional-panels.php:78
+#: inc/customizer/kirki-customizer-additional-panels.php:95
+msgid "Social Icon"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-additional-panels.php:101
+msgid "Social Link URL"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-design-panels.php:15
+msgid "Design Settings"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-design-panels.php:26
+msgid "Archive Layout Settings"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-design-panels.php:35
+msgid "Archive/Blog Sidebar layout"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-design-panels.php:56
+msgid "Page Layout Settings"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-design-panels.php:66
+msgid "Page Sidebar layout"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-design-panels.php:86
+msgid "Post Layout Settings"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-design-panels.php:94
+msgid "Post Sidebar layout"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-design-panels.php:113
+msgid "Gallery Page Settings"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-design-panels.php:121
+msgid "Enable Masonry Gallery"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-footer-panel.php:14
+msgid "Footer settings"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-footer-panel.php:25
+#: inc/customizer/kirki-customizer-footer-panel.php:109
+msgid "Footer Layout"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-footer-panel.php:35
+#: inc/customizer/kirki-customizer-footer-panel.php:119
+msgid "Footer Widget Area Layout"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-footer-panel.php:54
+msgid "Footer Content Setting"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-footer-panel.php:62
+msgid "Add image"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-footer-panel.php:63
+msgid "Add your footer logo here"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-footer-panel.php:71
+msgid "Add Contact number here"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-footer-panel.php:79
+msgid "Add Email Address here"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-footer-panel.php:87
+msgid "Copyright text"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-footer-panel.php:96
+msgid "Enable scroll to top button"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-general-panels.php:15
+msgid "General Settings"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-general-panels.php:23
+msgid "Theme Color"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-general-panels.php:35
+msgid "Site Settings"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-general-panels.php:45
+msgid "Site Layout"
+msgstr ""
+
+#: inc/customizer/kirki-customizer-general-panels.php:67
+msgid "Checked to hide latest posts in homepage."
+msgstr ""
+
+#: inc/customizer/kirki-customizer-general-panels.php:68
+msgid "Option to show/hide latest posts in frontpage"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:15
+msgid "Homepage Panel"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:24
+msgid "Hero Image Section"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:32
+msgid "Add hero image here"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:42
+msgid "Show/Hide Scroll Icon"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:51
+msgid "Add video url here"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:59
+msgid "Subtitle"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:68
+msgid "Main title"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:77
+msgid "Content"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:86
+#: inc/customizer/kirki-homepage-panel.php:139
+#: inc/customizer/kirki-homepage-panel.php:184
+msgid "Button Label"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:95
+#: inc/customizer/kirki-homepage-panel.php:147
+#: inc/customizer/kirki-homepage-panel.php:192
+msgid "Add button url here"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:107
+msgid "About Section"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:115
+#: inc/customizer/kirki-homepage-panel.php:213
+msgid "Add background image"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:123
+#: inc/customizer/kirki-homepage-panel.php:167
+#: inc/customizer/kirki-homepage-panel.php:221
+msgid "Section Title"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:131
+msgid "About Content"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:159
+msgid "Portfolio Section"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:175
+#: inc/customizer/kirki-homepage-panel.php:229
+#: inc/customizer/kirki-homepage-panel.php:266
+msgid "Choose category"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:205
+msgid "Testimonial Section"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:239
+#: inc/customizer/kirki-homepage-panel.php:276
+msgid "No of posts"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:258
+msgid "Blog Section"
+msgstr ""
+
+#: inc/customizer/kirki-homepage-panel.php:290
+msgid "Button text"
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:63
+msgid "Contact Form by WPForms – Drag & Drop Form Builder for WordPress"
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:91
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:92
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:93
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. %s: plugin name.
+#: inc/tgm/mt-recommended-plugins.php:94
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#. %s: plugin name.
+#: inc/tgm/mt-recommended-plugins.php:95
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:96
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/mt-recommended-plugins.php:101
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/mt-recommended-plugins.php:106
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/mt-recommended-plugins.php:111
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/mt-recommended-plugins.php:116
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/mt-recommended-plugins.php:121
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/mt-recommended-plugins.php:126
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/mt-recommended-plugins.php:131
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/mt-recommended-plugins.php:136
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/mt-recommended-plugins.php:141
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:142
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:143
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:144
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:145
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:146
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:147
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:148
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/tgm/mt-recommended-plugins.php:149
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Fotogenic is a Free WordPress Theme crafted for your blog, gallery or "
+"photography collection. It has a unique, modern, light and clean design "
+"which will make your website look awesome. It is completely built on "
+"Customizer which allows you to customize most of the theme settings easily "
+"with live previews. This theme comes with 3 different archive layouts and "
+"other exciting features that allow you to customize the theme easily without "
+"coding knowledge. Get free support at https://mysterythemes."
+"com/support/forum/themes/free-themes/ and check the demo at http://demo."
+"mysterythemes.com/fotogenic/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://mysterythemes.com/wp-themes/fotogenic/"
+msgstr ""
+
+#. Author of the theme
+msgid "Mystery Themes"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://mysterythemes.com/"
+msgstr ""

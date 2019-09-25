@@ -7,28 +7,27 @@ var gulp = require("gulp"),
   minifyCSS = require("gulp-clean-css"),
   concat = require("gulp-concat"),
   uglify = require("gulp-uglify"),
-  gutil = require("gulp-util"),
   ftp = require("vinyl-ftp"), // If SFTP uncomment below
   // sftp = require('gulp-sftp'),
-  watch = require("gulp-watch"),
+  //watch = require("gulp-watch"),
   cache = require("gulp-cached");
 
-var localChildDir = "app/wp-content/themes/html5blank-stable-child",
-  serverChildDir = "public_html/wp-content/themes/html5blank-stable-child";
+var localChildDir = "app/wp-content/themes/html5blank-stable",
+  serverChildDir = "wp-content/themes/html5blank-stable",
+  pluginsDir = "wp-content/plugins";
 
 var globs = [
-  localChildDir + "/**/*.css",
+  localChildDir + "/css/*.css",
   localChildDir + "/js/*.js",
   localChildDir + "/*.php"
 ];
 
 // Deploy To Server (FTP)
 var conn = ftp.create({
-  host: "ftp.silvestervella.com",
-  user: "silvevf4",
-  password: "",
-  parallel: 10,
-  log: gutil.log
+  host: "ftp.angraymode.com",
+  user: "mygreyblack@mygreyblack.com",
+  password: "O!DMTW)V3aB6",
+  parallel: 10
 });
 /*
 function deployftp() {
@@ -40,14 +39,14 @@ function deployftp() {
 function deploy_plugins_ftp() {
   return gulp
     .src("plugins/**/*.php")
-    .pipe(conn.newer("public_html/wp-content/plugins")) // Dir on server
-    .pipe(conn.dest("public_html/wp-content/plugins")); // Dir on server
+    .pipe(conn.newer(pluginsDir)) // Dir on server
+    .pipe(conn.dest(pluginsDir)); // Dir on server
 }
 function deploy_styles_ftp() {
   return gulp
-    .src(localChildDir + "/**/*.css")
-    .pipe(conn.newer(serverChildDir)) // Dir on server
-    .pipe(conn.dest(serverChildDir)); // Dir on server
+    .src(localChildDir + "/css/*.css")
+    //.pipe(conn.newer(serverChildDir + "/css"))// Dir on server
+    .pipe(conn.dest(serverChildDir + "/css")); // Dir on server
 }
 function deploy_maps_ftp() {
   return gulp
@@ -92,7 +91,7 @@ const logError = function(error) {
 
 function styles() {
   return gulp
-    .src("scss/all.scss")
+    .src("scss/styles.scss")
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(prefix("last 2 versions"))
@@ -103,7 +102,7 @@ function styles() {
 
 function admin() {
   return gulp
-    .src("scss/dashboard/admin-style.scss")
+    .src("scss/dash/admin-style-non-admin.scss")
     .pipe(sass())
     .pipe(prefix("last 2 versions"))
     .pipe(minifyCSS())
@@ -126,7 +125,7 @@ function plugins() {
 
 function scripts() {
   return gulp
-    .src("js/*.js")
+    .src("js/**/*.js")
     .pipe(uglify())
     .pipe(concat("script.js"))
     .pipe(gulp.dest(localChildDir + "/js"));
@@ -135,15 +134,10 @@ function scripts() {
 function watchScss() {
   gulp
     .watch(
-      ["scss/*.scss"],
-      gulp.series(styles, deploy_styles_ftp, deploy_maps_ftp)
-    )
+      ["scss/*.scss"], gulp.series(styles, deploy_styles_ftp, deploy_maps_ftp))
     .on("error", logError),
     gulp
-      .watch(
-        ["scss/dashboard/admin-style.scss"],
-        gulp.series(admin, deploy_styles_ftp)
-      )
+      .watch(["scss/dash/admin-style-non-admin.scss"],gulp.series(admin, deploy_styles_ftp))
       .on("error", logError),
     gulp
       .watch(["theme_files/*.php"], gulp.series(theme, deploy_theme_ftp))
@@ -152,7 +146,7 @@ function watchScss() {
       .watch(["plugins/**/*.php"], gulp.series(plugins, deploy_plugins_ftp))
       .on("error", logError),
     gulp
-      .watch(["js/*.js"], gulp.series(scripts, deploy_scripts_ftp))
+      .watch(["js/**/*.js"], gulp.series(scripts, deploy_scripts_ftp))
       .on("error", logError);
 }
 
