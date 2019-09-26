@@ -36,6 +36,9 @@
 					<section id="main-nav-outer" class="">
 						<nav class="navbar">
 							<div id="menu-button">MENU</div>
+							<div id="nav-collapse">
+								<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+							</div>
 						</nav>
 					</section>
 			</header>
