@@ -21,28 +21,75 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9878787', e
                 .menu-outer {
                     position: relative;
                     float: left;
-                    min-height: 300px;
-                    max-width: 250px;
-                    margin: 0 10px;
+                    height: 300px;
+                    width: 250px;
+                    margin: 0 20px;
                     background-position: center center;
                     background-size: cover;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        border-bottom: 0;
+                        
+                        -webkit-background-origin: border-box;
+                        -moz-background-origin: border;
+                        background-origin: border-box;
+                        background: linear-gradient(
+                            top,
+                            rgba(255, 255, 255, .15),
+                            rgba(0, 0, 0, .25)),
+                          linear-gradient(
+                            left top,
+                            rgba(255, 255, 255, 0),
+                            rgba(255, 255, 255, .15) 50%,
+                            rgba(255, 255, 255, 0) 50%,
+                            rgba(255, 255, 255, 0)
+                          );
+                    }
                     .menu-overlay {
                         width: 100%;
                         height: 100%;
-                        background: rgba(255,255,255,0.5);
+                        background: inherit;
                         position: absolute;
-                        top: 0;
-                        left: 0;
+                        overflow: hidden;
+                        &:before {
+                            content: "";
+                            width: 300px;
+                            height: 400px;
+                            background: inherit; 
+                            position: absolute;
+                            left: -25px;  //giving minus -25px left position
+                            right: 0;
+                            top: -25px;   //giving minus -25px top position 
+                            bottom: 0;
+                            box-shadow: inset 0 0 0 200px rgba(241, 241, 241, 0.8);
+                            filter: blur(10px);
+                        }
                     }
                     .menu-logo {
                         width: 100%;
+                        height: 80px;
                         text-align: center;
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
                         img {
-                            width: 80%;
-
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            max-height: 85%;
+                            width: auto;
                         }
                     }
-
                 }
             }
         }
