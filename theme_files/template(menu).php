@@ -6,7 +6,7 @@
  <?php get_header(); 
 $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
 $greyblack_logo =  wp_get_attachment_url(20);
-$angray_logo =  wp_get_attachment_url(74);
+$angray_logo =  wp_get_attachment_url(77);
 
 $greyblack_img =  wp_get_attachment_url(45);
 $angray_img =  wp_get_attachment_url(73);
@@ -17,7 +17,7 @@ $angray_img =  wp_get_attachment_url(73);
     <section id="menu-wrapper">
         <div id="menus">
 
-            <a href="https://mygreyblack.com/home"">
+            <a href="https://mygreyblack.com/home">
                 <div class="menu-outer" style="background-image: url(<?php echo $greyblack_img ?>)">
                     <div class="menu-overlay"></div>
                     <div class="menu-logo">
