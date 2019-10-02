@@ -10,6 +10,7 @@
  * 2. Add theme and post type support
  * 3. Add custom logo + check for svg
  * 4. Add top section background selector in customizer
+ * 5. Redirect wp-login url to homepage 
  */
 
  
@@ -142,5 +143,17 @@ function greyblack_set_top_home_back() {
     $style = ob_get_clean();
     $style = str_replace( 'body.custom-background', '#top', $style );
     echo $style;
+}
+
+
+/**
+ * 5. Redirect wp-login url to homepage 
+ */
+add_action(  'login_init', 'greyblack_user_registration_login_init'  );
+function greyblack_user_registration_login_init () {
+     if( ! is_user_logged_in() ) {
+        wp_redirect( '/' );
+        exit;
+      }
 }
 ?>
