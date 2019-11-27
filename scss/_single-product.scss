@@ -78,11 +78,35 @@ body.single-product {
   .woocommerce {
     div.product {
       div.summary {
-        float: left;
-        width: 25%;
-        position: absolute;
-        top: 50vh;
-        padding: 30px;
+        clear: both;
+        display: block;
+        margin: auto;
+        float: unset;
+        min-height: 20vh;
+        max-width: 400px;
+        padding: 25px;
+        p.price {
+          display: none;
+        }
+        .variations {
+          margin-bottom: 20px;
+        }
+        .single_variation_wrap {
+          padding-top: 20px;
+          border-top: 1px solid #bdbdbd;
+        }
+        .woocommerce-variation.single_variation {
+          display: inline-block;
+        }
+        .woocommerce-variation-add-to-cart {
+          float: right;
+          .button {
+            background: unset;
+            color: $primary;
+            border-radius: 0;
+            padding: 0 5px 10px 5px;
+          }
+        }
       }
       .woocommerce-tabs {
         clear: none;
@@ -104,35 +128,32 @@ body.single-product {
           display: none;
         }
         .flex-viewport {
-          background-size: cover;
+          height: auto !important;
+          background: lighten($grey , 20%);
           img {
-            height: 100vh !important;
-            width: auto !important;
-            margin: auto !important;
+            height: 80vh;
+            width: auto ;
+            margin: auto ;
           }
         }
         .flex-active-slide {
           img {
-            height: 100vh;
+            height: 80vh;
             width: auto;
             margin: auto;
-            &.zoomImg {
-              display: none !important;
-            }
           }
         }
         .flex-control-thumbs {
           position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
+          top: 50vh;
+          left: 0;
+          transform: translateY(-50%);
           width: auto;
           max-width: unset;
-          background: $primary;
-          padding: 10px;
           li {
-            width: 50px;
-            display: inline-block;
+            width: 70px;
+            display: block;
+            float: unset;
           }
         }
       }
