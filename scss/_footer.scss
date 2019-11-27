@@ -34,3 +34,32 @@ footer {
     }
   }
 }
+
+#main-nav-outer {
+  width: 100%;
+  .navbar {
+    width: 100%;
+    #menu-button {
+      position: fixed;
+      top: 35px;
+      right: 0;
+      font-family: $heading-font;
+      display: block;
+      font-size: 18px;
+      width: 70px;
+      text-align: center;
+      background: lighten($grey, 20%);
+      color: black;
+      padding: 10px;
+      z-index: 999;
+    }
+    #nav-collapse {
+      display: none;
+      top: 0px;
+      width: 100%;
+      background: white;
+      position: fixed;
+      height: 100vh;
+    }
+  }
+}

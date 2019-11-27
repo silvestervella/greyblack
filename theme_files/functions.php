@@ -11,6 +11,7 @@
  * 3. Add custom logo + check for svg
  * 4. Add top section background selector in customizer
  * 5. Redirect wp-login url to homepage 
+ * 6. woocommerce
  */
 
  
@@ -149,11 +150,24 @@ function greyblack_set_top_home_back() {
 /**
  * 5. Redirect wp-login url to homepage 
  */
-add_action(  'login_init', 'greyblack_user_registration_login_init'  );
-function greyblack_user_registration_login_init () {
-     if( ! is_user_logged_in() ) {
-        wp_redirect( '/' );
-        exit;
-      }
+// add_action(  'login_init', 'greyblack_user_registration_login_init'  );
+// function greyblack_user_registration_login_init () {
+//      if( ! is_user_logged_in() ) {
+//         wp_redirect( '/' );
+//         exit;
+//       }
+// }
+
+
+/**
+ * 6. woocommerce
+ */
+add_action ( 'genesis_before_loop', 'themeprefix_remove_post_info' );
+// Remove Post Info, Post Meta from CPT
+function themeprefix_remove_post_info() {
+	if ('product' == get_post_type()) {//add in your CPT name
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+		remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+	}
 }
 ?>

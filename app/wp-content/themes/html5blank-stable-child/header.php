@@ -32,13 +32,4 @@
 					<a id="logo" class="navbar-logo" href="<?php echo home_url(); ?>">
 						<?php greyblack_get_logo() ?>
 					</a>
-					<!-- Main navigation outer -->
-					<section id="main-nav-outer" class="">
-						<nav class="navbar">
-							<div id="menu-button">MENU</div>
-							<div id="nav-collapse">
-								<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-							</div>
-						</nav>
-					</section>
 			</header>

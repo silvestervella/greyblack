@@ -1,4 +1,5 @@
 body.single-product {
+  background: #fff;
   .prod-outer {
     min-height: calc(100vh - 100px);
     position: relative;
@@ -64,6 +65,98 @@ body.single-product {
         background-repeat: no-repeat;
         background-position: top right;
         background-attachment: fixed;
+      }
+    }
+  }
+
+  .the-title {
+    width: 48%;
+    margin-top: 100px;
+    float: left;
+  }
+
+  .woocommerce {
+    div.product {
+      div.summary {
+        float: left;
+        width: 25%;
+        position: absolute;
+        top: 50vh;
+        background: black;
+        padding: 30px;
+        span {
+          color: #fff;
+        }
+        td {
+          color: #fff;
+          label {
+            color: #fff;
+          }
+          option {
+            color: #fff;
+          }
+          a {
+            color: #fff;
+          }
+          input {
+            color: #fff;
+          }
+          select {
+            color: #fff;
+          }
+        }
+      }
+      .woocommerce-tabs {
+        clear: none;
+      float: left;
+      width: 48%;
+      }
+      section.related {
+        clear: both;
+      }
+      .woocommerce-product-gallery {
+        clear: both;
+        float: unset;
+        max-height: 100vh;
+        margin: auto;
+        width: 100%;
+      }
+      .images {
+        .woocommerce-product-gallery__trigger {
+          display: none;
+        }
+        .flex-viewport {
+          background-size: cover;
+          img {
+            height: 100vh !important;
+            width: auto !important;
+            margin: auto !important;
+          }
+        }
+        .flex-active-slide {
+          img {
+            height: 100vh;
+            width: auto;
+            margin: auto;
+            &.zoomImg {
+              display: none !important;
+            }
+          }
+        }
+        .flex-control-thumbs {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: auto;
+          max-width: unset;
+          background: $primary;
+          padding: 10px;
+          li {
+            width: 50px;
+            display: inline-block;
+          }
+        }
       }
     }
   }

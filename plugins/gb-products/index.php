@@ -15,23 +15,23 @@ defined( 'ABSPATH' ) or die( 'Oops!' );
 global $wp_rewrite;
 
 function greyblack_products() {
-  register_post_type( 'product',
-  array(
-    'labels' => array(
-      'name' => __( 'Product' ),
-      'singular_name' => __( 'Product' )
-    ),
-    'public' => false,  // it's not public, it shouldn't have it's own permalink, and so on
-    'publicly_queryable' => true,  // you should be able to query it
-    'show_ui' => true,  // you should be able to edit it in wp-admin
-    'exclude_from_search' => false,  // you should exclude it from search results
-    'show_in_nav_products' => false,  // you shouldn't be able to add it to products
-    'has_archive' => false,  // it shouldn't have archive page
-    'rewrite' => false,  // it shouldn't have rewrite rules
-    //'taxonomies'  => array( 'item_type' , 'gender' ),
-    'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields','excerpt' ),
-  )
-  );
+//   register_post_type( 'product',
+//   array(
+//     'labels' => array(
+//       'name' => __( 'Product' ),
+//       'singular_name' => __( 'Product' )
+//     ),
+//     'public' => false,  // it's not public, it shouldn't have it's own permalink, and so on
+//     'publicly_queryable' => true,  // you should be able to query it
+//     'show_ui' => true,  // you should be able to edit it in wp-admin
+//     'exclude_from_search' => false,  // you should exclude it from search results
+//     'show_in_nav_products' => false,  // you shouldn't be able to add it to products
+//     'has_archive' => false,  // it shouldn't have archive page
+//     'rewrite' => false,  // it shouldn't have rewrite rules
+//     //'taxonomies'  => array( 'item_type' , 'gender' ),
+//     'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields','excerpt' ),
+//   )
+//   );
 
   $taxonomies = array(
     array(

@@ -18,20 +18,6 @@
 
 <main role="main">
     <div class="posts-sec-outer">
-            <section id="home-prods">
-                <?php echo greyblack_generate_product_posts_home(array(
-                'posts_per_page' => '0',
-                'orderby' => 'date',
-                'order' => 'ASC',
-                'taxonomy' => 'placement',
-                'terms' => 'home' ) ); ?>
-                 <div id="link-to-prods">
-                    <a href="<?php echo get_post_permalink(23) ?>">view more..</a>
-                </div>
-            </section>
-            <div id="large-img">
-                <img src="" alt="product image" />
-            </div>
 
             <section id="home-about">
                 <div id="about-back" style="background-image: url(<?php echo get_post_meta( $about->ID, 'post-back', true ) ?>)"></div>
@@ -46,9 +32,21 @@
                         <div class="quote"><?php echo get_post_meta( $about->ID, 'quote', true ) ?></div>
                     </div>
             </section>
-            <section id="home-insta">
-                <?php echo do_shortcode("[get_insta]"); ?>
+            
+            <section id="home-prods">
+                <?php echo greyblack_generate_product_posts_home(array(
+                'posts_per_page' => '0',
+                'orderby' => 'date',
+                'order' => 'ASC',
+                'taxonomy' => 'placement',
+                'terms' => 'home' ) ); ?>
+                 <div id="link-to-prods">
+                    <a href="<?php echo get_post_permalink(23) ?>">view more..</a>
+                </div>
             </section>
+            <div id="large-img">
+                <img src="" alt="product image" />
+            </div>
     </div>
     <!-- /posts-sec-outer -->
 </main>

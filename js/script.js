@@ -13,7 +13,7 @@
  * 1.1 Function calls
  * 1.2 Home top fader
  * 1.3 Home thumbs click
- * 1.4 Instagram posts overlay
+ * 1.4 IMenu button click
  *
  *
  * 2. window.load
@@ -40,6 +40,7 @@ var myScrollFunction = function() {
     header.removeClass("fixed");
   }
 };
+
 
 jQuery(document).ready(function() {
   /* 1.1 Function calls */
@@ -100,13 +101,31 @@ jQuery(document).ready(function() {
       });
   });
 
-  /* 1.4 Instagram posts overlay */
-  jQuery(".insta-post").on("hover", function() {
-    jQuery(this)
-      .children(".img-overlay")
-      .slideToggle("slow");
+  /* 1.4 Menu button click */
+  jQuery("#menu-button").on("click", function() {
+    if (jQuery("#nav-collapse").hasClass("open")) {
+      jQuery("#nav-collapse")
+        .removeClass("open")
+        .fadeOut("300");
+      jQuery("body").css({
+        overflow: "visible"
+      });
+      jQuery(this).html("MENU");
+    } else {
+      jQuery("#nav-collapse")
+        .fadeIn("300")
+        .addClass("open");
+      jQuery("body").css({
+        overflow: "hidden"
+      });
+      jQuery(this).html("CLOSE");
+    }
   });
 });
+
+
+
+
 
 /**
  * 3. Event listenners
