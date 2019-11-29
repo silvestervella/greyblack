@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Baskervville:400,400i|Poiret+One&display=swap&subset=cyrillic,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Baskervville:400,400i&display=swap');
 
 @font-face {
   font-family: "My Custom Font";
@@ -10,7 +10,7 @@ $primary: rgb(103, 103, 103);
 $grey: #bdbdbd;
 
 $heading-font: 'Baskervville', serif;
-$main-font: 'Poiret One', cursive;
+$main-font: 'Barlow', sans-serif;
 
 * {
   margin: 0;
@@ -21,7 +21,12 @@ $main-font: 'Poiret One', cursive;
   vertical-align: baseline;
   background: transparent;
   font-family: $main-font;
+  font-weight: 300;
   color: $primary;
+}
+
+a, a:active, a:focus{
+  outline: none; 
 }
 
 body {
