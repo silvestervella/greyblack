@@ -8,7 +8,7 @@
 }
 
 footer {
-  //background: $grey;
+  background: lighten($grey , 20%);
   padding: 70px 0;
   .ft-section {
     padding: 30px 0;
@@ -23,7 +23,6 @@ footer {
       font-size: 16px;
       font-family: $heading-font;
       padding-bottom: 15px;
-      color: lighten($primary, 40%);
     }
     a {
       text-decoration: none;
@@ -60,6 +59,7 @@ footer {
       background: white;
       position: fixed;
       height: 100vh;
+      z-index: 99;
     }
   }
 }

@@ -1,4 +1,4 @@
-body.tax-collection {
+body.archive {
   .prod-outer {
     min-height: calc(100vh - 100px);
     position: relative;
@@ -8,47 +8,12 @@ body.tax-collection {
       position: relative;
       height: 100%;
       width: 50%;
-      .prod-title {
-        h2 {
-          color: darken($grey, 5%);
-          font-family: $heading-font;
-          font-weight: 300;
-          font-size: 50px;
-          text-align: right;
-          padding: 100px 30px 0px 0px;
-        }
-      }
-      .prod-info {
-        .prod-content {
-          padding: 50px 30px 0 0;
-          text-align: right;
-          color: darken($grey, 15%);
-        }
-      }
-      .az-link {
-        padding: 50px 0 0 0;
+      article {
+        width: 320px;
         text-align: center;
-        a {
-          text-decoration: none;
-          display: inline-block;
-          padding: 10px 20px;
-          border-bottom: 1px solid $accent;
-          border-top: 1px solid $accent;
-          border-radius: 2.5px;
-          color: $primary;
-        }
-        span {
-          color: $primary;
-          font-size: 13px;
-        }
-      }
-      .prod-thumbs {
-        text-align: center;
-        padding-top: 40px;
-        .gall-img-wrap {
-          display: inline-block;
-          margin: 30px 10px;
-        }
+        position: relative;
+        height: 100%;
+        display: inline-block;
       }
     }
     .prod-right {
@@ -64,6 +29,19 @@ body.tax-collection {
         background-repeat: no-repeat;
         background-position: top right;
         background-attachment: fixed;
+        .product-type-title {
+          position: sticky;
+          top: 200px;
+          left: 100%;
+          background: black;
+          color: $grey;
+          padding: 20px 50px;
+          width: auto;
+          display: inline-block;
+          transform: translateX(50%);
+          min-width: 100px;
+          text-align: center;
+        }
       }
     }
   }

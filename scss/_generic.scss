@@ -29,6 +29,11 @@ a, a:active, a:focus{
   outline: none; 
 }
 
+h1 , h2 , h3 , h4 , h5 , h6 {
+  color: $primary;
+  font-family: $heading-font;
+}
+
 body {
-  background: lighten($grey, 20%);
+  background: white;
 }
