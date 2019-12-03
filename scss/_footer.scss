@@ -60,6 +60,25 @@ footer {
       position: fixed;
       height: 100vh;
       z-index: 99;
+      ul {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        list-style: none;
+        li {
+          text-align: center;
+          padding: 10px 0;
+          a {
+            text-decoration: none;
+            font-size: 65px;
+            color: lighten($grey, 10%);
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
     }
   }
 }
