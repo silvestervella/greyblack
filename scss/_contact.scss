@@ -1,0 +1,68 @@
+main {
+    #form-outer {
+        min-height: calc(100vh - 100px);
+        margin-top: 100px;
+        #contact-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            min-width: 400px;
+            #response {
+                text-align: center;
+                font-size: 17px;
+                margin-bottom: 15px;
+                background: lighten($grey , 20%);
+                .error {
+                    background: red;
+                    padding: 20px;
+                    color: white;
+                }
+                .success {
+                    background: green;
+                    padding: 20px;
+                    color: white;
+                }
+            }
+            fieldset {
+                border: 0;
+                text-align: left;
+                label {
+                    span {
+                        font-size: 20px;
+                        color: lighten($grey , 5%);
+                        font-family: $heading-font;
+                        span {
+                            display: inline;
+                            &.required {
+                                font-size: 17px;
+                            }
+                        }
+                        &.human {
+                            font-size: 17px;
+                        }
+                    }
+                    input {
+                        display: block;
+                        margin: 15px 0 30px 0;
+                        border-bottom: 1px solid lighten($grey , 10%);
+                        width: 100%;
+                        font-size: 30px;
+                        font-style: italic;
+                        color: lighten($grey , 5%);
+                    }
+                    textarea {
+                        display: block;
+                        margin: 15px 0 30px 0;
+                        border-bottom: 1px solid $grey;
+                        width: 100%;
+                        min-height: 100px;
+                        font-size: 18px;
+                        font-style: italic;
+                        color: lighten($grey , 5%);
+                    }
+                }
+            }
+        }
+    }
+}
