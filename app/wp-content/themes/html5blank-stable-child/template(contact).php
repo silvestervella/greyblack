@@ -18,9 +18,9 @@ function mygreyblack_contact_form_generate_response($type, $message){
 }
 
 //response messages
-$not_human       = "Human verification incorrect.";
+$not_human       = "Human verification is incorrect.";
 $missing_content = "Please supply all required* information.";
-$missing_content_not_sent = "Order not sent! Please supply all required* information.";
+$missing_content_not_sent = "Message not sent! Please supply all required* information.";
 $email_invalid   = "Email Address Invalid.";
 $message_unsent  = "Message was not sent. Try Again.";
 $message_sent    = "Thanks! Your message has been sent. We'll get back to you soon.";

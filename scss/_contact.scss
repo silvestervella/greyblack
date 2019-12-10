@@ -7,19 +7,18 @@ main {
             top: 50%;
             left: 50%;
             transform: translate(-50% , -50%);
-            min-width: 400px;
+            width: 100%;
+            max-width: 500px;
             #response {
                 text-align: center;
                 font-size: 17px;
                 margin-bottom: 15px;
                 background: lighten($grey , 20%);
                 .error {
-                    background: red;
                     padding: 20px;
-                    color: white;
                 }
                 .success {
-                    background: green;
+                    background: $green;
                     padding: 20px;
                     color: white;
                 }
@@ -49,7 +48,7 @@ main {
                         width: 100%;
                         font-size: 30px;
                         font-style: italic;
-                        color: lighten($grey , 5%);
+                        text-indent: 20px;
                     }
                     textarea {
                         display: block;
@@ -59,8 +58,17 @@ main {
                         min-height: 100px;
                         font-size: 18px;
                         font-style: italic;
-                        color: lighten($grey , 5%);
+                        text-indent: 20px;
                     }
+                }
+                .submit {
+                    color: $primary;
+                    border-radius: 0;
+                    padding: 10px;
+                    background: lighten($grey, 20);
+                    font-size: 12px;
+                    line-height: unset;
+                    font-weight: 500;
                 }
             }
         }
